@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name='description' content="This web page is for ITD Tutorial 2">
+		<meta name='keywords' content="HTML, CSS3, JS, React JS, Mongo DB">
+		<meta name='author' content="Sachin">
+		<meta http-equiv='refresh' content='30'/>
+		<meta name='viewport' content="width=device-width, initial-scale=1.0"/>
+		<link rel="icon" href='./images/logo.png' />
+		<style>
+			*{
+				padding:0px;
+				margin:0px;
+			}	
+		
+			.header, .footer {
+				height: 100px;
+				width:100%;
+				background-color:black;
+				color:white;
+			}
+			.banner {
+				width:100%;
+				height:600px;
+			}
+			.content {
+				width:100%;
+			}
+			
+			li{
+				display:inline-block;
+				padding-left: 30px;
+			}
+			a{
+				color:#fff;
+				
+			}
+
+			#image_div{
+				width: 20%;
+				float: left;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<h1> Header </h1>
+			<ul style='padding:30px; list-style-type:none;float:right;'>
+					<li> <a href='https://www.google.com/'>Home   </a></li>
+					<li> <a href='https://www.google.com/'> About  </a></li>
+					<li> <a href='https://www.google.com/'> Contact  </a></li>
+					<li> <a href='https://www.google.com/'> Login   </a></li>		
+			</ul>
+
+
+
+		</div>
+		
+		<div class="banner" style="
+			background-image:url('images/bg1.jpg');
+			background-repeat:no-repeat;
+			background-size:100% 100%;
+
+		">
+
+			<div id='image_div'>
+
+			</div>
+
+		</div>
+		
+		
+		<div class="footer">
+			<h1> Footer </h1>
+		</div>
+	
+	<script>
+	
+			let data = ''
+			let image_array = ['bg1.jpg', 'image1.jpg']
+
+			for(let i=0;i<image_array.length;i++)
+			{
+				   data += `<img src='../images/${image_array[i]}' style="padding-left:200px;
+					padding-top:60px; 
+					width:100%;	border-radius:30px;"/>`
+			}
+
+			document.getElementById('image_div').innerHTML = data
+	
+	</script>
+	</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+    <style>
+        div{
+            height:100px;
+            width:100%;
+        }
+        .bg-primary{
+            background-color: red;
+            border:10px solid white;
+        }
+        .bg-blue{
+            background-color: blue;
+        }
+    </style>
+	</head>
+	<body>
+        <div class="div_1" id="main1">
+
+       </div>
+	</body>
+
+<script>
+
+    let main_el = document.querySelectorAll('#main1')
+
+    console.log(main_el)
+
+    let data = [
+        {
+            title:"News1",
+            image:"URL"
+        }
+        {
+            title:"News1",
+            image:"URL"
+        }
+        {
+            title:"News1",
+            image:"URL"
+        }
+        {
+            title:"News1",
+            image:"URL"
+        }
+        {
+            title:"News1",
+            image:"URL"
+        }
+
+
+
+
+    ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    for (let i=0; i< 10; i++){
+        data += `<div class='bg-primary'>
+            
+            
+                 </div>`
+    }
+
+    main_el.innerHTML = data
+
+</script>
+</html>
+

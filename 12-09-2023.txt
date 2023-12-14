@@ -1,0 +1,47 @@
+
+1. Inline 
+2. Internal
+3. External
+
+
+	key:value
+	property:value
+
+
+selector{
+	property:value
+	property:value
+}
+
+Simple Selectors
+Combinators
+Attribute Selectors
+Psuedo Elements Selectors
+Psuedo Class Selectors
+
+
+
+
+colors:
+	1. name of the color 
+	2. RGB
+			rgb(255,255,255)
+			#0000ff
+	3. HSL
+			Hue Saturation Light
+	
+	backgrond-color
+	text ==> color
+	border-color
+	
+	
+
+
+
+
+
+
+
+
+
+

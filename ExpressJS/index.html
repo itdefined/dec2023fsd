@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+<body>
+
+<div class="container">
+  <h2>File Upload using Express</h2>
+
+
+    <div class="form-group">
+      <label for="test_file">File Name:</label>
+      <input type="file" class="form-control" id="test_file" name="test_file">
+    </div>
+    <button type="submit" class="btn btn-default" id='submit_button'>Submit</button>
+
+
+  <p id='response'> </p>
+
+</div>
+
+<script type="text/javascript">
+
+	let submit_button = document.getElementById('submit_button')
+	
+
+	submit_button.addEventListener("click", (event)=>{
+		let url = '/file_upload'
+		let payload = { test_file: document.querySelector('#test_file').files[0]}
+		let headers = {  headers: {'Content-Type': 'multipart/form-data' }}
+
+		axios.post(url, payload, headers)
+		  .then(function (response) {
+		  	let response_p      = document.getElementById('response')
+		    response_p.innerHTML = response.data
+
+				Swal.fire({
+				  title: "Custom animation with Animate.css",
+				  showClass: {
+				    popup: `
+				      animate__animated
+				      animate__fadeInUp
+				      animate__faster
+				    `
+				  },
+				  hideClass: {
+				    popup: `
+				      animate__animated
+				      animate__fadeOutDown
+				      animate__faster
+				    `
+				  }
+				});
+		  })
+		  .catch(function (error) {
+		    console.log(error);
+		  });
+	});
+
+</script>
+
+</body>
+</html>
